@@ -19,6 +19,7 @@ LINE = "I put my keys on a hook so I'd never lose them. The hook is now missing.
 assert 1 <= len(LINE) <= 140, f"line is {len(LINE)} chars, must be 1-140"
 assert LINE.strip(), "line must not be only whitespace"
 assert "\n" not in LINE, "line must be a single line"
+assert LINE.isascii(), "line must be plain ASCII text"
 
 
 def main() -> int:
